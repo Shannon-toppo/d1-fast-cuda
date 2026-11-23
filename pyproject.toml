@@ -25,4 +25,4 @@ fp8 = ["triton-windows; platform_system == 'Windows'"]
 include = ["d1_fast_cuda*"]
 
 [tool.setuptools.package-data]
-d1_fast_cuda = ["fp8_table.json"]
+d1_fast_cuda = ["fp8_table.json", "csrc/*.cu"]
