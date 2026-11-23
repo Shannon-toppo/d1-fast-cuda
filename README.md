@@ -34,8 +34,9 @@ model.system_one(
 - **It is faster.** Single requests replay as CUDA graphs, the last layers compute only
   the rows the readout needs, the option logits read only the options' embedding rows,
   and a packed tree of questions attends by parts. An opt-in fp8 mode (Ada, RTX 40xx,
-  or newer) halves the bytes each pass reads, with a Triton fp8 matmul for the row
-  counts where it beats cuBLAS.
+  or newer) halves the bytes each pass reads, with a Triton fp8 matmul for the wide
+  projections and a CUTLASS Stream-K one for the narrow MLP down projections, where
+  each beats cuBLAS.
 
 ## Speed and accuracy
 
@@ -46,11 +47,11 @@ Windows (its WSL2 numbers are within a few percent; see the full table).
 
 | ms (lower is better) | d1-2B original | d1-2B bf16 | d1-2B fp8 | d1-3B original | d1-3B bf16 | d1-3B fp8 |
 |---|---:|---:|---:|---:|---:|---:|
-| 1 question | 15.6 | 9.4 | 6.7 | 16.5 | 13.8 | 8.8 |
-| 3 questions | 22.8 | 11.2 | 7.6 | 36.2 | 18.4 | 11.5 |
+| 1 question | 15.6 | 9.4 | 6.4 | 16.5 | 13.8 | 8.4 |
+| 3 questions | 22.8 | 11.2 | 7.5 | 36.2 | 18.4 | 10.7 |
 | long state, ~4200 tokens | 199 | 187 | 135 | 321 | 283 | 188 |
-| 384px image, 1 question | 27.5 | 19.6 | 15.8 | 36.8 | 32.6 | 25.0 |
-| 64 states, per second | 196 | 206 | 283 | 109 | 155 | 215 |
+| 384px image, 1 question | 27.5 | 19.6 | 16.1 | 36.8 | 32.6 | 25.2 |
+| 64 states, per second | 196 | 206 | 285 | 109 | 155 | 215 |
 | GPU memory, resident (GB) | | 3.8 | 2.5 | | 6.3 | 4.0 |
 
 bf16 and fp8 here are after `model.compile()`. Without it, single requests still run
@@ -74,6 +75,14 @@ uv pip install --python .venv/Scripts/python.exe -e ".[dev,compile]"
 
 `compile` adds `triton-windows` on Windows, which `model.compile()` and the fp8 mode
 need. fp8 needs an Ada (RTX 40xx) or newer GPU.
+
+Optional, for fp8: the CUTLASS matmul is built with nvcc on first use (Windows: Visual
+Studio 2022's MSVC, found by itself) and cached in `~/.cache/d1_fast_cuda`. It needs the
+CUTLASS headers; without them fp8 uses cuBLAS alone, with a warning.
+
+```powershell
+git clone --depth 1 --branch v4.7.1 https://github.com/NVIDIA/cutlass third_party/cutlass
+```
 
 ## Tests
 

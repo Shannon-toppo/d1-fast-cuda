@@ -61,8 +61,8 @@ class FP8Weight:
 def linear(x: Tensor, w) -> Tensor:
     """`x @ w.T`; an `FP8Weight` multiplies in float8 with each row of `x` scaled to
     e4m3's range, both scales applied to the product: in the row range `w.rows` by the
-    Triton kernel (`fp8.linear8`), otherwise by cuBLAS with the scales left to
-    torch.compile to fuse."""
+    Triton kernel (`fp8.linear8`), otherwise by `fp8.gemm32` (cuBLAS or CUTLASS) with
+    the scales left to torch.compile to fuse."""
     if isinstance(w, Tensor):
         return x @ w.T
     shape = x.shape
@@ -71,7 +71,7 @@ def linear(x: Tensor, w) -> Tensor:
     x8 = (x2.float() / s).to(fp8.F8)
     if w.rows[0] < x2.shape[0] <= w.rows[1]:
         return fp8.linear8(x8, s.view(-1), w.w8, w.scale).view(*shape[:-1], -1)
-    y = torch._scaled_mm(x8, w.w8.T, scale_a=w.one, scale_b=w.one, out_dtype=torch.float32)
+    y = fp8.gemm32(x8, w.w8)  # float32, cuBLAS or CUTLASS
     return (y * s * w.scale).to(x.dtype).view(*shape[:-1], -1)
 
 

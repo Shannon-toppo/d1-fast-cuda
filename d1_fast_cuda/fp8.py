@@ -1,4 +1,5 @@
-"""Float8 matmuls for Ada (sm_89) and newer: a Triton kernel for few rows.
+"""Float8 matmuls for Ada (sm_89) and newer: a Triton kernel for few rows, and CUTLASS
+or cuBLAS for the float32 product otherwise.
 
 A pass over one short state is 100-300 rows, so each projection is bound by reading
 its weight. cuBLAS' fp8 kernels (`torch._scaled_mm`) reach about two thirds of the
@@ -13,9 +14,14 @@ Which tile shape is fastest depends on the projection and the row count:
 `fp8_table.json` (made by bench/fp8_tune.py, on an RTX 4070 Ti) holds the best per
 d1 projection shape and row bucket, with its time and cuBLAS'. The kernel wins up to
 a few hundred rows; past that the matmuls turn bound by arithmetic and cuBLAS is as
-fast or faster. `Table.rows` picks, per model, up to how many rows the kernel runs
-(where the model's projections together take less time than cuBLAS'); above it
-`lm.linear` calls cuBLAS directly, the scales left to torch.compile to fuse.
+fast or faster. `Table.rows` picks, per model, the row range in which the kernel
+runs for its wide projections; elsewhere `lm.linear` takes the float32 product from
+`gemm32` and leaves the scales to torch.compile to fuse.
+
+`gemm32` is cuBLAS' `_scaled_mm`, or CUTLASS (`cutlass_fp8`, Stream-K) where the table
+measured it faster: mainly the narrow, long-K MLP down projections (N = 2048), whose
+few output tiles leave SMs idle in cuBLAS' data-parallel kernels. CUTLASS needs nvcc,
+a host compiler and its headers to build; without them `gemm32` is cuBLAS alone.
 
 `split > 1` divides K over several programs (float32 partials summed afterwards) so
 narrow outputs (N = 2048) still fill every SM.
@@ -37,7 +43,9 @@ import triton.language as tl  # noqa: E402
 Tensor = torch.Tensor
 F8 = torch.float8_e4m3fn
 F8_MAX = 448.0
-KERNEL = os.environ.get("D1_FP8_KERNEL", "1") != "0"  # "0": cuBLAS only, for comparison
+KERNEL = os.environ.get("D1_FP8_KERNEL", "1") != "0"  # "0": no Triton kernel, for comparison
+CUTLASS = os.environ.get("D1_CUTLASS_GEMM", "1") != "0"  # "0": no CUTLASS, for comparison
+WIDE = 3072  # outputs at least this wide may take the Triton kernel (it is weak on narrow ones)
 MARGIN = 0.95
 MIN_ROWS = 32
 _TABLE = Path(__file__).with_name("fp8_table.json")
@@ -127,21 +135,33 @@ class Table:
         data = json.loads(path.read_text()) if path.exists() else {"ms": [], "shapes": {}}
         self.ms, self.shapes = data["ms"], data["shapes"]
         self.triton_us, self.cublas_us = data.get("triton_us", {}), data.get("cublas_us", {})
+        self.gemm_ms, self.gemm, self.gemm_us = data.get("gemm_ms", []), data.get("gemm", {}), data.get("gemm_us", {})
+        self._cutlass = None  # config name -> index, once the library is loaded
+
+    def _alt_us(self, key: str, i: int, m: int, n: int) -> float:
+        """`gemm32`'s time at Triton bucket i, plus writing and reading back float32
+        instead of bfloat16 (4 more bytes per output) for the scales applied after it."""
+        t = self.cublas_us[key][i]
+        if self.cutlass_ready() and key in self.gemm_us and m in self.gemm_ms:
+            t = min(t, self.gemm_us[key][self.gemm_ms.index(m)])
+        return t + m * n * 4 / 504e9 * 1e6
 
     def rows(self, shapes: list[tuple[int, int]]) -> tuple[int, int]:
         """The row range (lo, hi] in which the kernel runs for a model whose projections
-        are `shapes` [(n, k), ...]: the longest run of row buckets above `MIN_ROWS` in
-        which their summed kernel time never exceeds cuBLAS' and somewhere stays
-        `MARGIN` below it. (0, 0) when there is none or the table lacks a shape.
+        are `shapes` [(n, k), ...] (those at least `WIDE` wide): the longest run of row
+        buckets above `MIN_ROWS` in which their summed kernel time never exceeds
+        `gemm32`'s (with its float32 output) and somewhere stays `MARGIN` below it. (0, 0) when there is none or the table lacks a shape.
         Few rows stay with cuBLAS: there the table's buckets are coarse, and d1-2B's
         last-layer windows (1-21 rows) measured slower through the kernel."""
         if not KERNEL or not self.ms:
             return 0, 0
+        shapes = [s for s in shapes if s[0] >= WIDE]
         keys = [f"{k}x{n}" for n, k in shapes]
-        if any(key not in self.triton_us for key in keys):
+        if not keys or any(key not in self.triton_us for key in keys):
             return 0, 0
-        ratio = [sum(self.triton_us[key][i] for key in keys) / sum(self.cublas_us[key][i] for key in keys)
-                 for i in range(len(self.ms))]
+        ratio = [sum(self.triton_us[key][i] for key in keys)
+                 / sum(self._alt_us(key, i, m, n) for key, (n, _) in zip(keys, shapes))
+                 for i, m in enumerate(self.ms)]
         best, run = (0, 0), None
         for i, m in enumerate(self.ms):
             if m <= MIN_ROWS or ratio[i] > 1.0:
@@ -151,6 +171,28 @@ class Table:
             if run[2] and run[1] - run[0] > best[1] - best[0]:
                 best = (run[0], run[1])
         return best
+
+    def cutlass_ready(self) -> bool:
+        if self._cutlass is None:
+            self._cutlass = {}
+            if CUTLASS and self.gemm:
+                try:
+                    from . import cutlass_fp8
+
+                    self._cutlass = {name: i for i, name in enumerate(cutlass_fp8.configs())}
+                except Exception as e:  # no nvcc, compiler or headers: cuBLAS only
+                    import warnings
+
+                    warnings.warn(f"CUTLASS fp8 GEMM unavailable, using cuBLAS only: {e}")
+        return bool(self._cutlass)
+
+    def pick_gemm(self, m: int, n: int, k: int) -> int | None:
+        """The CUTLASS config index for `gemm32`, or None for cuBLAS."""
+        row = self.gemm.get(f"{k}x{n}")
+        if row is None or not self.cutlass_ready():
+            return None
+        name = row[min(bisect.bisect_left(self.gemm_ms, m), len(self.gemm_ms) - 1)]
+        return self._cutlass.get(name)
 
     def pick(self, m: int, n: int, k: int) -> dict:
         row = self.shapes.get(f"{k}x{n}")
@@ -174,6 +216,30 @@ def linear8(x8: Tensor, sx: Tensor, w8: Tensor, sw: Tensor) -> Tensor:
 @linear8.register_fake
 def _(x8, sx, w8, sw):
     return x8.new_empty((x8.shape[0], w8.shape[0]), dtype=torch.bfloat16)
+
+
+_ONE: dict = {}
+
+
+@torch.library.custom_op("d1fast::gemm32", mutates_args=())
+def gemm32(x8: Tensor, w8: Tensor) -> Tensor:
+    """float32 `x8 @ w8.T` of e4m3 rows and weight, unscaled: CUTLASS where the table
+    picked it, else cuBLAS. Opaque to torch.compile, which fuses the scales after it."""
+    m, k = x8.shape
+    cfg = TABLE.pick_gemm(m, w8.shape[0], k)
+    if cfg is not None:
+        from . import cutlass_fp8
+
+        return cutlass_fp8.mm(x8, w8, cfg)
+    one = _ONE.get(x8.device)
+    if one is None:
+        one = _ONE[x8.device] = torch.ones((), device=x8.device)
+    return torch._scaled_mm(x8, w8.T, scale_a=one, scale_b=one, out_dtype=torch.float32)
+
+
+@gemm32.register_fake
+def _(x8, w8):
+    return x8.new_empty((x8.shape[0], w8.shape[0]), dtype=torch.float32)
 
 
 def quantize_rows(x: Tensor) -> tuple[Tensor, Tensor]:
