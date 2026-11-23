@@ -22,10 +22,16 @@ What it does differently from the original forward (docs/design.ja.md):
 
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass, field
 
 import torch
 import torch.nn.functional as F
+
+try:  # the fp8 mode's Triton kernel (Ada or newer); bfloat16 and float32 need no Triton
+    from . import fp8
+except ImportError:  # pragma: no cover
+    fp8 = None
 
 Tensor = torch.Tensor
 
@@ -36,10 +42,6 @@ def rms(x: Tensor, w: Tensor, eps: float) -> Tensor:
     return (x32 * torch.rsqrt(x32.pow(2).mean(-1, keepdim=True) + eps)).to(x.dtype) * w
 
 
-F8 = torch.float8_e4m3fn
-F8_MAX = 448.0
-
-
 @dataclass
 class FP8Weight:
     """An (N, K) weight in float8 e4m3, one float32 scale per output row."""
@@ -47,23 +49,29 @@ class FP8Weight:
     w8: Tensor
     scale: Tensor  # (N,)
     one: Tensor  # () 1.0, the scales `_scaled_mm` takes (Ada has no row-wise scaling)
+    rows: tuple[int, int] = (0, 0)  # (lo, hi]: rows `fp8.linear8` takes, cuBLAS the rest (`fp8.Table.rows`)
 
     @classmethod
     def of(cls, w: Tensor) -> "FP8Weight":
-        scale = w.detach().abs().amax(dim=1).float().clamp(min=1e-12) / F8_MAX
-        w8 = (w.detach().float() / scale[:, None]).to(F8)
+        scale = w.detach().abs().amax(dim=1).float().clamp(min=1e-12) / fp8.F8_MAX
+        w8 = (w.detach().float() / scale[:, None]).to(fp8.F8)
         return cls(w8, scale, torch.ones((), device=w.device))
 
 
 def linear(x: Tensor, w) -> Tensor:
     """`x @ w.T`; an `FP8Weight` multiplies in float8 with each row of `x` scaled to
-    e4m3's range, both scales applied to the float32 product."""
+    e4m3's range, both scales applied to the product: in the row range `w.rows` by the
+    Triton kernel (`fp8.linear8`), otherwise by cuBLAS with the scales left to
+    torch.compile to fuse."""
     if isinstance(w, Tensor):
         return x @ w.T
     shape = x.shape
     x2 = x.reshape(-1, shape[-1])
-    s = x2.abs().amax(-1, keepdim=True).float().clamp(min=1e-12) / F8_MAX
-    y = torch._scaled_mm((x2.float() / s).to(F8), w.w8.T, scale_a=w.one, scale_b=w.one, out_dtype=torch.float32)
+    s = x2.abs().amax(-1, keepdim=True).float().clamp(min=1e-12) / fp8.F8_MAX
+    x8 = (x2.float() / s).to(fp8.F8)
+    if w.rows[0] < x2.shape[0] <= w.rows[1]:
+        return fp8.linear8(x8, s.view(-1), w.w8, w.scale).view(*shape[:-1], -1)
+    y = torch._scaled_mm(x8, w.w8.T, scale_a=w.one, scale_b=w.one, out_dtype=torch.float32)
     return (y * s * w.scale).to(x.dtype).view(*shape[:-1], -1)
 
 
@@ -144,15 +152,28 @@ class HybridLM:
         self.context = sum(l.taps - 1 for l in layers[self.last_attention + 1:])
         self.run = self.forward  # `compile()` swaps in the inductor-fused forward
 
-    def to_fp8(self, names=("w_in", "conv_in", "w13", "w2")) -> None:
-        """Opt-in: the wide projections as `FP8Weight`s (half the bytes a pass reads).
-        The 2048 x 2048 output projections stay bfloat16: cuBLAS runs them faster
-        than `_scaled_mm` at d1's row counts (bench/fp8_shapes.py)."""
+    def to_fp8(self, names=None) -> None:
+        """Opt-in (Ada or newer): the wide projections as `FP8Weight`s, half the bytes a
+        pass reads. The 2048 x 2048 output projections stay bfloat16: in fp8 they
+        doubled the largest answer difference for a few percent of speed
+        (docs/design.ja.md). `D1_FP8_NAMES` overrides the set, for experiments."""
+        if fp8 is None:
+            raise RuntimeError("fp8 needs Triton (pip install triton-windows on Windows)")
+        if not fp8.supported():
+            raise RuntimeError("fp8 needs a GPU of compute capability 8.9 (Ada, RTX 40xx) or newer")
+        if names is None:
+            names = os.environ.get("D1_FP8_NAMES", "w_in,conv_in,w13,w2").split(",")
+        weights = []
         for layer in self.layers:
             for name in names:
                 w = getattr(layer, name)
                 if isinstance(w, Tensor):
-                    setattr(layer, name, FP8Weight.of(w))
+                    weights.append(FP8Weight.of(w))
+                    setattr(layer, name, weights[-1])
+        rows = fp8.TABLE.rows([tuple(w.w8.shape) for w in weights])
+        for w in weights:
+            w.rows = rows
+        self.fp8_rows = rows
 
     def compile(self, dynamic: bool | None = None, mode: str | None = None) -> None:
         """Fuse the elementwise work (norms, RoPE, gates, the residual adds) around the

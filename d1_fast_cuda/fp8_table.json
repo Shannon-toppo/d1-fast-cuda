@@ -1,0 +1,1038 @@
+{
+ "device": "NVIDIA GeForce RTX 4070 Ti",
+ "ms": [
+  16,
+  32,
+  64,
+  96,
+  128,
+  160,
+  192,
+  256,
+  320,
+  384,
+  512
+ ],
+ "shapes": {
+  "2048x3088": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 3,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ],
+  "2048x2048": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ],
+  "2048x6144": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ],
+  "2048x15360": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ],
+  "7680x2048": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ],
+  "2048x3072": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ],
+  "2048x21504": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ],
+  "10752x2048": [
+   {
+    "BM": 16,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 4
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 4,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 32,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 3,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 128,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   },
+   {
+    "BM": 64,
+    "BN": 64,
+    "BK": 128,
+    "SPLIT": 1,
+    "GROUP": 8,
+    "num_warps": 4,
+    "num_stages": 3
+   }
+  ]
+ },
+ "triton_us": {
+  "2048x3088": [
+   14.74,
+   15.22,
+   16.01,
+   31.43,
+   17.61,
+   24.54,
+   24.37,
+   31.09,
+   40.58,
+   45.8,
+   60.11
+  ],
+  "2048x2048": [
+   10.54,
+   10.85,
+   11.4,
+   11.5,
+   14.51,
+   14.6,
+   16.2,
+   23.18,
+   27.07,
+   30.86,
+   41.42
+  ],
+  "2048x6144": [
+   27.44,
+   27.96,
+   29.31,
+   32.41,
+   33.38,
+   39.25,
+   45.94,
+   60.17,
+   64.51,
+   79.36,
+   106.69
+  ],
+  "2048x15360": [
+   68.43,
+   69.36,
+   70.38,
+   71.34,
+   76.17,
+   94.58,
+   96.8,
+   127.8,
+   159.56,
+   189.71,
+   249.82
+  ],
+  "7680x2048": [
+   33.31,
+   34.2,
+   35.94,
+   35.91,
+   48.63,
+   50.61,
+   51.75,
+   80.11,
+   86.59,
+   101.75,
+   143.25
+  ],
+  "2048x3072": [
+   14.57,
+   15.05,
+   15.8,
+   16.95,
+   16.93,
+   20.1,
+   24.16,
+   31.16,
+   32.15,
+   45.47,
+   60.18
+  ],
+  "2048x21504": [
+   95.64,
+   97.99,
+   99.81,
+   105.95,
+   109.73,
+   130.96,
+   138.55,
+   180.22,
+   219.14,
+   260.97,
+   345.57
+  ],
+  "10752x2048": [
+   48.06,
+   48.37,
+   49.22,
+   49.29,
+   63.35,
+   68.54,
+   71.2,
+   109.32,
+   119.94,
+   140.66,
+   196.51
+  ]
+ },
+ "cublas_us": {
+  "2048x3088": [
+   15.36,
+   15.19,
+   431.65,
+   27.92,
+   16.88,
+   22.32,
+   21.05,
+   27.58,
+   39.83,
+   39.94,
+   52.7
+  ],
+  "2048x2048": [
+   10.82,
+   10.55,
+   10.95,
+   10.96,
+   15.33,
+   14.95,
+   14.92,
+   20.82,
+   26.97,
+   27.41,
+   39.83
+  ],
+  "2048x6144": [
+   27.23,
+   27.65,
+   29.49,
+   32.12,
+   32.32,
+   35.26,
+   40.96,
+   52.84,
+   53.45,
+   65.77,
+   90.92
+  ],
+  "2048x15360": [
+   69.09,
+   68.98,
+   68.88,
+   73.93,
+   74.79,
+   80.59,
+   83.11,
+   106.39,
+   132.06,
+   157.63,
+   208.32
+  ],
+  "7680x2048": [
+   35.57,
+   35.67,
+   35.66,
+   48.98,
+   48.98,
+   49.56,
+   49.73,
+   71.54,
+   94.38,
+   94.31,
+   140.25
+  ],
+  "2048x3072": [
+   14.54,
+   14.67,
+   15.09,
+   16.62,
+   16.62,
+   21.26,
+   21.22,
+   27.99,
+   28.02,
+   40.07,
+   52.62
+  ],
+  "2048x21504": [
+   98.61,
+   100.32,
+   108.95,
+   116.39,
+   127.56,
+   137.55,
+   143.97,
+   157.21,
+   184.58,
+   221.39,
+   295.7
+  ],
+  "10752x2048": [
+   52.77,
+   50.01,
+   49.94,
+   67.45,
+   68.13,
+   68.53,
+   68.54,
+   99.26,
+   131.37,
+   130.8,
+   195.89
+  ]
+ }
+}

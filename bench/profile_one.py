@@ -15,7 +15,7 @@ import d1_fast_cuda  # noqa: E402
 from d1_fast_cuda import graphs as G  # noqa: E402
 
 name = sys.argv[1]
-m = d1_fast_cuda.load(f"LiquidAI/{name}")
+m = d1_fast_cuda.load(f"LiquidAI/{name}", fp8="--fp8" in sys.argv)
 fast = m.d1_fast
 if "--compile" in sys.argv:
     m.compile()

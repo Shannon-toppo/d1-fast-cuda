@@ -22,7 +22,7 @@ model.system_one(
 ## 何が違うか
 
 - **Windowsで動きます。** 元のコードはPyTorchのflash attentionの演算を直接呼びますが、Windows版のPyTorchにはそれがありません（`USE_FLASH_ATTENTION was not enabled for build`で止まります）。このパッケージはマスク付きのSDPAだけでattentionを計算します。
-- **速くなります。** 1件ずつの呼び出しはCUDA graphで再生し、最後の層ではreadoutが読む行だけを計算し、logitsは選択肢のembeddingの行だけをfloat32で読み、複数質問の木はtrunkとbranchに分けてattentionを計算します。オプションのfp8モードでは、1回のpassで読む重みのバイト数が半分になります。
+- **速くなります。** 1件ずつの呼び出しはCUDA graphで再生し、最後の層ではreadoutが読む行だけを計算し、logitsは選択肢のembeddingの行だけをfloat32で読み、複数質問の木はtrunkとbranchに分けてattentionを計算します。オプションのfp8モード（Ada、RTX 40シリーズ以降）では、1回のpassで読む重みのバイト数が半分になり、cuBLASより速い行数ではTritonで書いたfp8の行列積を使います。
 
 ## 速さと精度
 
@@ -30,11 +30,11 @@ RTX 4070 Ti、ウォーム呼び出しの中央値、2回の通し計測の速�
 
 | ms（小さいほど速い） | d1-2B 元の実装 | d1-2B bf16 | d1-2B fp8 | d1-3B 元の実装 | d1-3B bf16 | d1-3B fp8 |
 |---|---:|---:|---:|---:|---:|---:|
-| 1問 | 15.6 | 9.4 | 6.6 | 16.5 | 13.8 | 8.8 |
-| 3問同時 | 22.8 | 11.2 | 7.6 | 36.2 | 18.4 | 10.6 |
-| 長文 約4200トークン | 199 | 187 | 134 | 321 | 283 | 186 |
-| 画像384px 1問 | 27.5 | 19.6 | 15.3 | 36.8 | 32.6 | 24.6 |
-| バッチ64件（件/秒） | 196 | 206 | 287 | 109 | 155 | 217 |
+| 1問 | 15.6 | 9.4 | 6.7 | 16.5 | 13.8 | 8.8 |
+| 3問同時 | 22.8 | 11.2 | 7.6 | 36.2 | 18.4 | 11.5 |
+| 長文 約4200トークン | 199 | 187 | 135 | 321 | 283 | 188 |
+| 画像384px 1問 | 27.5 | 19.6 | 15.8 | 36.8 | 32.6 | 25.0 |
+| バッチ64件（件/秒） | 196 | 206 | 283 | 109 | 155 | 215 |
 | GPUメモリ 常駐（GB） | | 3.8 | 2.5 | | 6.3 | 4.0 |
 
 bf16とfp8は`model.compile()`のあとの数字です。compileしなくても1件ずつの呼び出しはCUDA graphで動きます（1問で2Bが12.4ms、3Bが15.8ms）。全体の表と方法は[results/benchmark.md](results/benchmark.md)と[docs/design.ja.md](docs/design.ja.md)にあります。
@@ -49,7 +49,7 @@ uv pip install --python .venv/Scripts/python.exe torch --index-url https://downl
 uv pip install --python .venv/Scripts/python.exe -e ".[dev,compile]"
 ```
 
-`compile`はWindowsで`triton-windows`を入れます（`model.compile()`に必要です）。fp8にはAda（RTX 40シリーズ）以降のGPUが必要です。
+`compile`はWindowsで`triton-windows`を入れます（`model.compile()`とfp8モードに必要です）。fp8にはAda（RTX 40シリーズ）以降のGPUが必要です。
 
 ## テスト
 
