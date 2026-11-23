@@ -1,0 +1,2254 @@
+{
+ "text00:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "billing",
+    "confidence": 0.9929809255720426,
+    "probabilities": {
+     "billing": 0.9929809255720426,
+     "engineering": 0.0017621355697678928,
+     "sales": 0.004275325477203466,
+     "account": 0.0009816133809861442
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 102,
+   "output_tokens": 0
+  }
+ },
+ "text01:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "billing",
+    "confidence": 0.9945588088642577,
+    "probabilities": {
+     "billing": 0.9945588088642577,
+     "engineering": 0.0014695517652590858,
+     "sales": 0.0020375122970994336,
+     "account": 0.001934127073383758
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 100,
+   "output_tokens": 0
+  }
+ },
+ "text02:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "billing",
+    "confidence": 0.987126005695807,
+    "probabilities": {
+     "billing": 0.987126005695807,
+     "engineering": 0.0017652574054616153,
+     "sales": 0.0031125481836376282,
+     "account": 0.007996188715093791
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 104,
+   "output_tokens": 0
+  }
+ },
+ "text03:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "billing",
+    "confidence": 0.9875079508720053,
+    "probabilities": {
+     "billing": 0.9875079508720053,
+     "engineering": 0.0026267571429367804,
+     "sales": 0.0050892099785217705,
+     "account": 0.004776082006536296
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 100,
+   "output_tokens": 0
+  }
+ },
+ "text04:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "engineering",
+    "confidence": 0.9888352605868572,
+    "probabilities": {
+     "billing": 0.0015083959379335304,
+     "engineering": 0.9888352605868572,
+     "sales": 0.001626753623017864,
+     "account": 0.0080295898521914
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 102,
+   "output_tokens": 0
+  }
+ },
+ "text05:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "engineering",
+    "confidence": 0.983688298655484,
+    "probabilities": {
+     "billing": 0.0054559475886583044,
+     "engineering": 0.983688298655484,
+     "sales": 0.004045057726512478,
+     "account": 0.006810696029345119
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 99,
+   "output_tokens": 0
+  }
+ },
+ "text06:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "engineering",
+    "confidence": 0.9868416019888385,
+    "probabilities": {
+     "billing": 0.006666447116026399,
+     "engineering": 0.9868416019888385,
+     "sales": 0.0032139169127678997,
+     "account": 0.0032780339823670077
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 101,
+   "output_tokens": 0
+  }
+ },
+ "text07:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "engineering",
+    "confidence": 0.9185447864354236,
+    "probabilities": {
+     "billing": 0.014717674532490413,
+     "engineering": 0.9185447864354236,
+     "sales": 0.006677080308543745,
+     "account": 0.06006045872354233
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 100,
+   "output_tokens": 0
+  }
+ },
+ "text08:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "sales",
+    "confidence": 0.980706390239515,
+    "probabilities": {
+     "billing": 0.01565553643366419,
+     "engineering": 0.0019500860513023371,
+     "sales": 0.980706390239515,
+     "account": 0.0016879872755186868
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 108,
+   "output_tokens": 0
+  }
+ },
+ "text09:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "sales",
+    "confidence": 0.9532544043978535,
+    "probabilities": {
+     "billing": 0.04093687713525959,
+     "engineering": 0.0030884862504314404,
+     "sales": 0.9532544043978535,
+     "account": 0.0027202322164555956
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 100,
+   "output_tokens": 0
+  }
+ },
+ "text10:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "sales",
+    "confidence": 0.9880423853509459,
+    "probabilities": {
+     "billing": 0.009099100808249444,
+     "engineering": 0.0013642444402203991,
+     "sales": 0.9880423853509459,
+     "account": 0.001494269400584211
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 99,
+   "output_tokens": 0
+  }
+ },
+ "text11:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "sales",
+    "confidence": 0.7433553225542912,
+    "probabilities": {
+     "billing": 0.24584354083532542,
+     "engineering": 0.005015154346021904,
+     "sales": 0.7433553225542912,
+     "account": 0.005785982264361415
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 97,
+   "output_tokens": 0
+  }
+ },
+ "text12:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "account",
+    "confidence": 0.9886772525025053,
+    "probabilities": {
+     "billing": 0.0014119803903512812,
+     "engineering": 0.008484857558490143,
+     "sales": 0.0014259095486533972,
+     "account": 0.9886772525025053
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 98,
+   "output_tokens": 0
+  }
+ },
+ "text13:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "account",
+    "confidence": 0.9921675109573117,
+    "probabilities": {
+     "billing": 0.0030572481949621994,
+     "engineering": 0.002349458476317916,
+     "sales": 0.0024257823714081404,
+     "account": 0.9921675109573117
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 99,
+   "output_tokens": 0
+  }
+ },
+ "text14:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "account",
+    "confidence": 0.9954506609012747,
+    "probabilities": {
+     "billing": 0.0018667530703063249,
+     "engineering": 0.0014256002813440027,
+     "sales": 0.0012569857470750014,
+     "account": 0.9954506609012747
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 97,
+   "output_tokens": 0
+  }
+ },
+ "text15:team": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "account",
+    "confidence": 0.9760393282545455,
+    "probabilities": {
+     "billing": 0.003591487793993047,
+     "engineering": 0.01789658785758549,
+     "sales": 0.002472596093875945,
+     "account": 0.9760393282545455
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 104,
+   "output_tokens": 0
+  }
+ },
+ "text16:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "positive",
+    "confidence": 0.9756110830958313,
+    "probabilities": {
+     "positive": 0.9756110830958313,
+     "negative": 0.013060099290148277,
+     "neutral": 0.01132881761402031
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 67,
+   "output_tokens": 0
+  }
+ },
+ "text17:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "positive",
+    "confidence": 0.989254909488581,
+    "probabilities": {
+     "positive": 0.989254909488581,
+     "negative": 0.005950860119470735,
+     "neutral": 0.004794230391948242
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 68,
+   "output_tokens": 0
+  }
+ },
+ "text18:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "positive",
+    "confidence": 0.9941351167855036,
+    "probabilities": {
+     "positive": 0.9941351167855036,
+     "negative": 0.002483111456495902,
+     "neutral": 0.00338177175800057
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 63,
+   "output_tokens": 0
+  }
+ },
+ "text19:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "negative",
+    "confidence": 0.9725505228591704,
+    "probabilities": {
+     "positive": 0.007671690825585941,
+     "negative": 0.9725505228591704,
+     "neutral": 0.019777786315243625
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 67,
+   "output_tokens": 0
+  }
+ },
+ "text20:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "negative",
+    "confidence": 0.9960872414793647,
+    "probabilities": {
+     "positive": 0.0016354801540877009,
+     "negative": 0.9960872414793647,
+     "neutral": 0.002277278366547848
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 68,
+   "output_tokens": 0
+  }
+ },
+ "text21:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "negative",
+    "confidence": 0.9950732652115876,
+    "probabilities": {
+     "positive": 0.002013858806168481,
+     "negative": 0.9950732652115876,
+     "neutral": 0.0029128759822438254
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 67,
+   "output_tokens": 0
+  }
+ },
+ "text22:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "positive",
+    "confidence": 0.5550446384137051,
+    "probabilities": {
+     "positive": 0.5550446384137051,
+     "negative": 0.052107330160415195,
+     "neutral": 0.3928480314258797
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 69,
+   "output_tokens": 0
+  }
+ },
+ "text23:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "negative",
+    "confidence": 0.42297676801701695,
+    "probabilities": {
+     "positive": 0.20171951894703088,
+     "negative": 0.42297676801701695,
+     "neutral": 0.37530371303595217
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 68,
+   "output_tokens": 0
+  }
+ },
+ "text24:sentiment": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "neutral",
+    "confidence": 0.7828309256786542,
+    "probabilities": {
+     "positive": 0.14535137483709817,
+     "negative": 0.07181769948424765,
+     "neutral": 0.7828309256786542
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 64,
+   "output_tokens": 0
+  }
+ },
+ "text25:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 2.0,
+    "confidence": 0.992894309931263,
+    "probabilities": {
+     "0": 0.0024536460592307864,
+     "1": 0.004652044009506244,
+     "2": 0.992894309931263
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 69,
+   "output_tokens": 0
+  }
+ },
+ "text26:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 2.0,
+    "confidence": 0.9532653408551582,
+    "probabilities": {
+     "0": 0.009970362666683202,
+     "1": 0.03676429647815861,
+     "2": 0.9532653408551582
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 69,
+   "output_tokens": 0
+  }
+ },
+ "text27:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 2.0,
+    "confidence": 0.9605548686642776,
+    "probabilities": {
+     "0": 0.00883249878442787,
+     "1": 0.03061263255129451,
+     "2": 0.9605548686642776
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 68,
+   "output_tokens": 0
+  }
+ },
+ "text28:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 2.0,
+    "confidence": 0.8557468559666912,
+    "probabilities": {
+     "0": 0.005614715924977515,
+     "1": 0.13863842810833132,
+     "2": 0.8557468559666912
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 72,
+   "output_tokens": 0
+  }
+ },
+ "text29:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 1.0,
+    "confidence": 0.901304782261014,
+    "probabilities": {
+     "0": 0.013389197727999404,
+     "1": 0.901304782261014,
+     "2": 0.08530602001098656
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 69,
+   "output_tokens": 0
+  }
+ },
+ "text30:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 1.0,
+    "confidence": 0.612639501839976,
+    "probabilities": {
+     "0": 0.014068463317404047,
+     "1": 0.612639501839976,
+     "2": 0.37329203484262
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 66,
+   "output_tokens": 0
+  }
+ },
+ "text31:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 0.0,
+    "confidence": 0.9559392292960881,
+    "probabilities": {
+     "0": 0.9559392292960881,
+     "1": 0.037090130467778024,
+     "2": 0.006970640236133956
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 73,
+   "output_tokens": 0
+  }
+ },
+ "text32:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 0.0,
+    "confidence": 0.9765992224875855,
+    "probabilities": {
+     "0": 0.9765992224875855,
+     "1": 0.01604987829003743,
+     "2": 0.007350899222377062
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 67,
+   "output_tokens": 0
+  }
+ },
+ "text33:score": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 0.0,
+    "confidence": 0.9785261695297176,
+    "probabilities": {
+     "0": 0.9785261695297176,
+     "1": 0.0140020350360936,
+     "2": 0.007471795434188899
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 71,
+   "output_tokens": 0
+  }
+ },
+ "text34:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9990415138823524
+   }
+  },
+  "usage": {
+   "input_tokens": 49,
+   "output_tokens": 0
+  }
+ },
+ "text35:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.013817429322333258
+   }
+  },
+  "usage": {
+   "input_tokens": 39,
+   "output_tokens": 0
+  }
+ },
+ "text36:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9980848308172487
+   }
+  },
+  "usage": {
+   "input_tokens": 45,
+   "output_tokens": 0
+  }
+ },
+ "text37:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.0034127066742737177
+   }
+  },
+  "usage": {
+   "input_tokens": 40,
+   "output_tokens": 0
+  }
+ },
+ "text38:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.007124443793569227
+   }
+  },
+  "usage": {
+   "input_tokens": 49,
+   "output_tokens": 0
+  }
+ },
+ "text39:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9982405877789502
+   }
+  },
+  "usage": {
+   "input_tokens": 49,
+   "output_tokens": 0
+  }
+ },
+ "text40:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9978813439748232
+   }
+  },
+  "usage": {
+   "input_tokens": 40,
+   "output_tokens": 0
+  }
+ },
+ "text41:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.0034092233863676556
+   }
+  },
+  "usage": {
+   "input_tokens": 39,
+   "output_tokens": 0
+  }
+ },
+ "text42:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.990428571685597
+   }
+  },
+  "usage": {
+   "input_tokens": 48,
+   "output_tokens": 0
+  }
+ },
+ "text43:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.005413011944839078
+   }
+  },
+  "usage": {
+   "input_tokens": 47,
+   "output_tokens": 0
+  }
+ },
+ "text44:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9949333329075344
+   }
+  },
+  "usage": {
+   "input_tokens": 48,
+   "output_tokens": 0
+  }
+ },
+ "text45:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.0032405495639417827
+   }
+  },
+  "usage": {
+   "input_tokens": 46,
+   "output_tokens": 0
+  }
+ },
+ "image00": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "four",
+    "confidence": 0.9994171914904867,
+    "probabilities": {
+     "one": 0.0001831133146942264,
+     "two": 0.00024059213996891905,
+     "three": 0.00015910305485011461,
+     "four": 0.9994171914904867
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9996857649395379,
+    "probabilities": {
+     "red": 9.481210942736249e-05,
+     "blue": 0.00012773098986913729,
+     "green": 9.169196116568822e-05,
+     "yellow": 0.9996857649395379
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "circle",
+    "confidence": 0.9993900038664584,
+    "probabilities": {
+     "circle": 0.9993900038664584,
+     "square": 0.0005140356152009409,
+     "triangle": 9.59605183405769e-05
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image01": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9945760429952472,
+    "probabilities": {
+     "one": 0.0007197107296326797,
+     "two": 0.0019570890138597614,
+     "three": 0.9945760429952472,
+     "four": 0.002747157261260304
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9996574951833107,
+    "probabilities": {
+     "red": 0.00010279135975391957,
+     "blue": 0.00013771446419177304,
+     "green": 0.00010199899274363382,
+     "yellow": 0.9996574951833107
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.999546305220908,
+    "probabilities": {
+     "circle": 0.00020588249632458024,
+     "square": 0.999546305220908,
+     "triangle": 0.00024781228276750947
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image02": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9801704195205578,
+    "probabilities": {
+     "one": 0.0015431048340182733,
+     "two": 0.0044456999512695215,
+     "three": 0.9801704195205578,
+     "four": 0.013840775694154352
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9996056946810421,
+    "probabilities": {
+     "red": 0.0001146697813253575,
+     "blue": 0.0001576629642352279,
+     "green": 0.00012197257339728715,
+     "yellow": 0.9996056946810421
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.9995324098023743,
+    "probabilities": {
+     "circle": 0.00022198976378488044,
+     "square": 0.9995324098023743,
+     "triangle": 0.0002456004338407279
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image03": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "two",
+    "confidence": 0.9989879968392795,
+    "probabilities": {
+     "one": 0.00029686969938233536,
+     "two": 0.9989879968392795,
+     "three": 0.00042387899219275367,
+     "four": 0.00029125446914552116
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "blue",
+    "confidence": 0.9998032853454698,
+    "probabilities": {
+     "red": 5.0414808169630185e-05,
+     "blue": 0.9998032853454698,
+     "green": 8.231880222329682e-05,
+     "yellow": 6.398104413726254e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.9996263282160459,
+    "probabilities": {
+     "circle": 0.00017059388076153293,
+     "square": 0.9996263282160459,
+     "triangle": 0.00020307790319248596
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image04": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "two",
+    "confidence": 0.9987043478336207,
+    "probabilities": {
+     "one": 0.00029581022436996247,
+     "two": 0.9987043478336207,
+     "three": 0.0007288048191339909,
+     "four": 0.00027103712287534045
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "red",
+    "confidence": 0.9998157240247577,
+    "probabilities": {
+     "red": 0.9998157240247577,
+     "blue": 8.438037746549689e-05,
+     "green": 4.5764679066281976e-05,
+     "yellow": 5.413091871037456e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9995565852509568,
+    "probabilities": {
+     "circle": 0.00017608704278938693,
+     "square": 0.00026732770625390885,
+     "triangle": 0.9995565852509568
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image05": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9646176317225178,
+    "probabilities": {
+     "one": 0.002527555678930281,
+     "two": 0.004821621945689944,
+     "three": 0.9646176317225178,
+     "four": 0.028033190652861962
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "blue",
+    "confidence": 0.999784987537155,
+    "probabilities": {
+     "red": 5.417551546391652e-05,
+     "blue": 0.999784987537155,
+     "green": 9.051387061603528e-05,
+     "yellow": 7.032307676513018e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.9995433006028704,
+    "probabilities": {
+     "circle": 0.00021493453791386673,
+     "square": 0.9995433006028704,
+     "triangle": 0.00024176485921591743
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image06": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "one",
+    "confidence": 0.9985314984254331,
+    "probabilities": {
+     "one": 0.9985314984254331,
+     "two": 0.0007460413036857011,
+     "three": 0.00047727289153906853,
+     "four": 0.00024518737934213367
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "red",
+    "confidence": 0.9994287420510282,
+    "probabilities": {
+     "red": 0.9994287420510282,
+     "blue": 0.00024620618495179835,
+     "green": 0.00017420555435976133,
+     "yellow": 0.00015084620966051353
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9991335970684492,
+    "probabilities": {
+     "circle": 0.00037766376438091987,
+     "square": 0.0004887391671699215,
+     "triangle": 0.9991335970684492
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image07": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9963780945902945,
+    "probabilities": {
+     "one": 0.00040381348181151087,
+     "two": 0.0010217783318217579,
+     "three": 0.9963780945902945,
+     "four": 0.0021963135960722364
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9996386850441045,
+    "probabilities": {
+     "red": 0.00010910153876178895,
+     "blue": 0.00014682213526674752,
+     "green": 0.00010539128186690325,
+     "yellow": 0.9996386850441045
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9995659747218922,
+    "probabilities": {
+     "circle": 0.0001550751044102436,
+     "square": 0.0002789501736976678,
+     "triangle": 0.9995659747218922
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image08": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "one",
+    "confidence": 0.9986514050297376,
+    "probabilities": {
+     "one": 0.9986514050297376,
+     "two": 0.0007594407124548597,
+     "three": 0.0002516561527781961,
+     "four": 0.00033749810502920917
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "green",
+    "confidence": 0.9993817423838566,
+    "probabilities": {
+     "red": 0.00018380303410059592,
+     "blue": 0.00023532490273131158,
+     "green": 0.9993817423838566,
+     "yellow": 0.00019912967931147622
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.9991229101321022,
+    "probabilities": {
+     "circle": 0.0004129927657338046,
+     "square": 0.9991229101321022,
+     "triangle": 0.0004640971021640109
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image09": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9973995053995792,
+    "probabilities": {
+     "one": 0.0003327423393738744,
+     "two": 0.0008024757381737582,
+     "three": 0.9973995053995792,
+     "four": 0.001465276522873236
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "blue",
+    "confidence": 0.9998217671017593,
+    "probabilities": {
+     "red": 4.2196223451366325e-05,
+     "blue": 0.9998217671017593,
+     "green": 7.751991219562963e-05,
+     "yellow": 5.851676259365363e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9996717652601327,
+    "probabilities": {
+     "circle": 0.00012300232060901968,
+     "square": 0.0002052324192583428,
+     "triangle": 0.9996717652601327
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image10": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "four",
+    "confidence": 0.9994221517330693,
+    "probabilities": {
+     "one": 0.0001349673793279965,
+     "two": 0.00021852307864861207,
+     "three": 0.00022435780895415337,
+     "four": 0.9994221517330693
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9996926130632313,
+    "probabilities": {
+     "red": 9.607390583450222e-05,
+     "blue": 0.00012379502741613583,
+     "green": 8.751800351804847e-05,
+     "yellow": 0.9996926130632313
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9995328167185338,
+    "probabilities": {
+     "circle": 0.00016120139199245556,
+     "square": 0.000305981889473625,
+     "triangle": 0.9995328167185338
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image11": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9952892058517481,
+    "probabilities": {
+     "one": 0.00044235456167491003,
+     "two": 0.0011248120910221544,
+     "three": 0.9952892058517481,
+     "four": 0.003143627495554945
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "red",
+    "confidence": 0.9998335053139139,
+    "probabilities": {
+     "red": 0.9998335053139139,
+     "blue": 7.70306745835263e-05,
+     "green": 4.1904496165870126e-05,
+     "yellow": 4.7559515336467886e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9995922565925507,
+    "probabilities": {
+     "circle": 0.00015102125801326021,
+     "square": 0.0002567221494361149,
+     "triangle": 0.9995922565925507
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image12": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "one",
+    "confidence": 0.9986809141878386,
+    "probabilities": {
+     "one": 0.9986809141878386,
+     "two": 0.0006440965150144475,
+     "three": 0.0004449457852626817,
+     "four": 0.00023004351188430548
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "red",
+    "confidence": 0.9996104362935329,
+    "probabilities": {
+     "red": 0.9996104362935329,
+     "blue": 0.00017559802805927973,
+     "green": 0.00011191226771021407,
+     "yellow": 0.0001020534106977355
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9992487049667228,
+    "probabilities": {
+     "circle": 0.000333938464012764,
+     "square": 0.00041735656926441357,
+     "triangle": 0.9992487049667228
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image13": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "four",
+    "confidence": 0.9994096854784374,
+    "probabilities": {
+     "one": 0.00014296454142278061,
+     "two": 0.00023887716748140773,
+     "three": 0.0002084728126583503,
+     "four": 0.9994096854784374
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "red",
+    "confidence": 0.9998410306165161,
+    "probabilities": {
+     "red": 0.9998410306165161,
+     "blue": 7.32370302030012e-05,
+     "green": 3.851963994311831e-05,
+     "yellow": 4.721271333781905e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9994679848163357,
+    "probabilities": {
+     "circle": 0.0001731982439397323,
+     "square": 0.00035881693972467733,
+     "triangle": 0.9994679848163357
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image14": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "four",
+    "confidence": 0.9994163359527862,
+    "probabilities": {
+     "one": 0.00019362326939051667,
+     "two": 0.00024261582018572243,
+     "three": 0.00014742495763745767,
+     "four": 0.9994163359527862
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "green",
+    "confidence": 0.9998205133942871,
+    "probabilities": {
+     "red": 3.970139412074232e-05,
+     "blue": 7.125940687701093e-05,
+     "green": 0.9998205133942871,
+     "yellow": 6.852580471513684e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "circle",
+    "confidence": 0.9993371842615661,
+    "probabilities": {
+     "circle": 0.9993371842615661,
+     "square": 0.0005687402624293591,
+     "triangle": 9.407547600432723e-05
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image15": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9982856992133088,
+    "probabilities": {
+     "one": 0.00031317433784074675,
+     "two": 0.0006511686427754775,
+     "three": 0.9982856992133088,
+     "four": 0.0007499578060748884
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "red",
+    "confidence": 0.9998734715308794,
+    "probabilities": {
+     "red": 0.9998734715308794,
+     "blue": 6.172494491813014e-05,
+     "green": 3.0441139208779865e-05,
+     "yellow": 3.436238499374612e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "circle",
+    "confidence": 0.9996369458339753,
+    "probabilities": {
+     "circle": 0.9996369458339753,
+     "square": 0.00022237192940586343,
+     "triangle": 0.00014068223661866598
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image16": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "two",
+    "confidence": 0.9993233038699282,
+    "probabilities": {
+     "one": 0.00018739275292219848,
+     "two": 0.9993233038699282,
+     "three": 0.00033349410588153394,
+     "four": 0.00015580927126835877
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "blue",
+    "confidence": 0.9998174205596624,
+    "probabilities": {
+     "red": 4.599028948312592e-05,
+     "blue": 0.9998174205596624,
+     "green": 7.702896846878306e-05,
+     "yellow": 5.956018238566842e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "circle",
+    "confidence": 0.999747619403604,
+    "probabilities": {
+     "circle": 0.999747619403604,
+     "square": 0.00017171593778912749,
+     "triangle": 8.066465860687017e-05
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image17": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "four",
+    "confidence": 0.9993288698447992,
+    "probabilities": {
+     "one": 0.00023070308774987157,
+     "two": 0.00027715269473115966,
+     "three": 0.0001632743727198218,
+     "four": 0.9993288698447992
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "red",
+    "confidence": 0.9998939042172487,
+    "probabilities": {
+     "red": 0.9998939042172487,
+     "blue": 5.1949896573263785e-05,
+     "green": 2.4800441611161945e-05,
+     "yellow": 2.9345444566968404e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "circle",
+    "confidence": 0.9994084844684888,
+    "probabilities": {
+     "circle": 0.9994084844684888,
+     "square": 0.0004931379797952502,
+     "triangle": 9.837755171576392e-05
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image18": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9980547542486664,
+    "probabilities": {
+     "one": 0.0003292728837269374,
+     "two": 0.0007538119702734433,
+     "three": 0.9980547542486664,
+     "four": 0.0008621608973331434
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9996856180870937,
+    "probabilities": {
+     "red": 9.222055747979964e-05,
+     "blue": 0.00012745906054468457,
+     "green": 9.470229488178165e-05,
+     "yellow": 0.9996856180870937
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "circle",
+    "confidence": 0.9996682136180307,
+    "probabilities": {
+     "circle": 0.9996682136180307,
+     "square": 0.000222896915406842,
+     "triangle": 0.0001088894665623772
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image19": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9978359160888781,
+    "probabilities": {
+     "one": 0.00033447213926253997,
+     "two": 0.0008411016976772404,
+     "three": 0.9978359160888781,
+     "four": 0.0009885100741821307
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "green",
+    "confidence": 0.9997496932259091,
+    "probabilities": {
+     "red": 5.691778301070726e-05,
+     "blue": 9.705271195753303e-05,
+     "green": 0.9997496932259091,
+     "yellow": 9.633627912266135e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9996003337374105,
+    "probabilities": {
+     "circle": 0.00014437900090271912,
+     "square": 0.0002552872616867627,
+     "triangle": 0.9996003337374105
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image20": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "one",
+    "confidence": 0.9988555651478612,
+    "probabilities": {
+     "one": 0.9988555651478612,
+     "two": 0.0005961467555829584,
+     "three": 0.000354159191697771,
+     "four": 0.00019412890485817887
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "green",
+    "confidence": 0.9995958299961775,
+    "probabilities": {
+     "red": 0.00010997816277428073,
+     "blue": 0.0001601497601150048,
+     "green": 0.9995958299961775,
+     "yellow": 0.000134042080933196
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "triangle",
+    "confidence": 0.9993698044508597,
+    "probabilities": {
+     "circle": 0.00027290524176911947,
+     "square": 0.0003572903073710821,
+     "triangle": 0.9993698044508597
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image21": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "two",
+    "confidence": 0.9987458151948199,
+    "probabilities": {
+     "one": 0.00041807026787543444,
+     "two": 0.9987458151948199,
+     "three": 0.0004848526388378574,
+     "four": 0.0003512618984670593
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "green",
+    "confidence": 0.9997641196938626,
+    "probabilities": {
+     "red": 5.810327978223687e-05,
+     "blue": 9.21762859860719e-05,
+     "green": 0.9997641196938626,
+     "yellow": 8.56007403690439e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.999524327837868,
+    "probabilities": {
+     "circle": 0.00023111946979852444,
+     "square": 0.999524327837868,
+     "triangle": 0.0002445526923334595
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image22": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "one",
+    "confidence": 0.9974928190265794,
+    "probabilities": {
+     "one": 0.9974928190265794,
+     "two": 0.0016249979614135616,
+     "three": 0.0004130374268761367,
+     "four": 0.0004691455851309721
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9985137444218836,
+    "probabilities": {
+     "red": 0.0004413568749660865,
+     "blue": 0.0005822456473025909,
+     "green": 0.00046265305584765505,
+     "yellow": 0.9985137444218836
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.9987634361430557,
+    "probabilities": {
+     "circle": 0.0006012581319791449,
+     "square": 0.9987634361430557,
+     "triangle": 0.0006353057249650491
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "image23": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "two",
+    "confidence": 0.9992513861618604,
+    "probabilities": {
+     "one": 0.00022501420613059412,
+     "two": 0.9992513861618604,
+     "three": 0.00035222623545175805,
+     "four": 0.00017137339655723657
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "green",
+    "confidence": 0.9998198844659609,
+    "probabilities": {
+     "red": 4.170701099649525e-05,
+     "blue": 7.220101046712833e-05,
+     "green": 0.9998198844659609,
+     "yellow": 6.620751257544697e-05
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "circle",
+    "confidence": 0.9997325299592268,
+    "probabilities": {
+     "circle": 0.9997325299592268,
+     "square": 0.0001872714801738787,
+     "triangle": 8.01985605993018e-05
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "tree3:text": {
+  "answers": {
+   "team": {
+    "type": "choice",
+    "choice": "engineering",
+    "confidence": 0.5467058043891101,
+    "probabilities": {
+     "billing": 0.4310417917126736,
+     "engineering": 0.5467058043891101,
+     "sales": 0.007873746346800282,
+     "account": 0.014378657551416069
+    }
+   },
+   "urgency": {
+    "type": "score",
+    "score": 2.0,
+    "confidence": 0.9191419957689014,
+    "probabilities": {
+     "0": 0.003629914825720645,
+     "1": 0.07722808940537786,
+     "2": 0.9191419957689014
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   },
+   "refund": {
+    "type": "noul",
+    "noul": 0.05224982248942326
+   }
+  },
+  "usage": {
+   "input_tokens": 192,
+   "output_tokens": 0
+  }
+ },
+ "tree5:text": {
+  "answers": {
+   "team": {
+    "type": "choice",
+    "choice": "engineering",
+    "confidence": 0.5097736277516265,
+    "probabilities": {
+     "billing": 0.4672520465011241,
+     "engineering": 0.5097736277516265,
+     "sales": 0.008092779700554277,
+     "account": 0.014881546046695103
+    }
+   },
+   "urgency": {
+    "type": "score",
+    "score": 2.0,
+    "confidence": 0.9168221814151977,
+    "probabilities": {
+     "0": 0.003453788753026509,
+     "1": 0.07972402983177576,
+     "2": 0.9168221814151977
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   },
+   "refund": {
+    "type": "noul",
+    "noul": 0.05394842245412608
+   },
+   "money": {
+    "type": "noul",
+    "noul": 0.9802703923412475
+   },
+   "mood": {
+    "type": "score",
+    "score": 1.0,
+    "confidence": 0.677153214348664,
+    "probabilities": {
+     "0": 0.262471031547844,
+     "1": 0.677153214348664,
+     "2": 0.05172290777245195,
+     "3": 0.005766521393075126,
+     "4": 0.0028863249379649245
+    },
+    "legend": {
+     "0": "Furious.",
+     "1": "Unhappy.",
+     "2": "Neutral.",
+     "3": "Happy.",
+     "4": "Delighted."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 278,
+   "output_tokens": 0
+  }
+ },
+ "tree3:image": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9945760429952472,
+    "probabilities": {
+     "one": 0.0007197107296326797,
+     "two": 0.0019570890138597614,
+     "three": 0.9945760429952472,
+     "four": 0.002747157261260304
+    }
+   },
+   "color": {
+    "type": "choice",
+    "choice": "yellow",
+    "confidence": 0.9996574951833107,
+    "probabilities": {
+     "red": 0.00010279135975391957,
+     "blue": 0.00013771446419177304,
+     "green": 0.00010199899274363382,
+     "yellow": 0.9996574951833107
+    }
+   },
+   "shape": {
+    "type": "choice",
+    "choice": "square",
+    "confidence": 0.999546305220908,
+    "probabilities": {
+     "circle": 0.00020588249632458024,
+     "square": 0.999546305220908,
+     "triangle": 0.00024781228276750947
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 275,
+   "output_tokens": 0
+  }
+ },
+ "tree2:image+text": {
+  "answers": {
+   "count": {
+    "type": "choice",
+    "choice": "three",
+    "confidence": 0.9910069324516297,
+    "probabilities": {
+     "one": 0.0013078400599390802,
+     "two": 0.0032250001206998156,
+     "three": 0.9910069324516297,
+     "four": 0.004460227367731581
+    }
+   },
+   "refund": {
+    "type": "noul",
+    "noul": 0.053049725885773016
+   }
+  },
+  "usage": {
+   "input_tokens": 230,
+   "output_tokens": 0
+  }
+ },
+ "json:noul": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9988881281049464
+   }
+  },
+  "usage": {
+   "input_tokens": 167,
+   "output_tokens": 0
+  }
+ },
+ "json:tree": {
+  "answers": {
+   "tier": {
+    "type": "choice",
+    "choice": "gold",
+    "confidence": 0.9988255152312671,
+    "probabilities": {
+     "bronze": 0.00044342481092529896,
+     "silver": 0.0007310599578075486,
+     "gold": 0.9988255152312671
+    }
+   },
+   "big": {
+    "type": "noul",
+    "noul": 0.0914102090301091
+   }
+  },
+  "usage": {
+   "input_tokens": 204,
+   "output_tokens": 0
+  }
+ },
+ "long:choice": {
+  "answers": {
+   "team": {
+    "type": "choice",
+    "choice": "billing",
+    "confidence": 0.9060263400218679,
+    "probabilities": {
+     "billing": 0.9060263400218679,
+     "engineering": 0.06380798442135913,
+     "sales": 0.013555802195890292,
+     "account": 0.01660987336088251
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 4180,
+   "output_tokens": 0
+  }
+ },
+ "long:tree": {
+  "answers": {
+   "team": {
+    "type": "choice",
+    "choice": "billing",
+    "confidence": 0.9189007007346693,
+    "probabilities": {
+     "billing": 0.9189007007346693,
+     "engineering": 0.05267308387489901,
+     "sales": 0.013812613522127412,
+     "account": 0.014613601868304184
+    }
+   },
+   "urgency": {
+    "type": "score",
+    "score": 1.0,
+    "confidence": 0.6140596320207976,
+    "probabilities": {
+     "0": 0.16848038374029414,
+     "1": 0.6140596320207976,
+     "2": 0.2174599842389083
+    },
+    "legend": {
+     "0": "Low: can wait days.",
+     "1": "Medium: should be handled today.",
+     "2": "High: needs immediate action."
+    }
+   },
+   "refund": {
+    "type": "noul",
+    "noul": 0.9907396510791525
+   }
+  },
+  "usage": {
+   "input_tokens": 4252,
+   "output_tokens": 0
+  }
+ },
+ "score5": {
+  "answers": {
+   "q": {
+    "type": "score",
+    "score": 4.0,
+    "confidence": 0.7577320807817749,
+    "probabilities": {
+     "0": 0.0013069173166831744,
+     "1": 0.001535194953922369,
+     "2": 0.008527722436341019,
+     "3": 0.23089808451127855,
+     "4": 0.7577320807817749
+    },
+    "legend": {
+     "0": "Furious.",
+     "1": "Unhappy.",
+     "2": "Neutral.",
+     "3": "Happy.",
+     "4": "Delighted."
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 61,
+   "output_tokens": 0
+  }
+ },
+ "noul:criteria": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9803825738602661
+   }
+  },
+  "usage": {
+   "input_tokens": 77,
+   "output_tokens": 0
+  }
+ },
+ "choice:letters": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choice": "B",
+    "confidence": 0.9961420693727121,
+    "probabilities": {
+     "A": 0.0024446931137052075,
+     "B": 0.9961420693727121,
+     "C": 0.0014132375135826976
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 49,
+   "output_tokens": 0
+  }
+ },
+ "read:text": {
+  "answers": {
+   "name": {
+    "type": "text",
+    "text": "Mika Tanaka",
+    "span": [
+     68,
+     79
+    ],
+    "found": 0.9928016262526088,
+    "path": "/order/customer/name"
+   },
+   "note": {
+    "type": "text",
+    "text": "Leave at the front desk.",
+    "span": [
+     362,
+     386
+    ],
+    "found": 0.9924240044599919,
+    "path": "/order/notes"
+   }
+  },
+  "usage": {
+   "input_tokens": 212,
+   "output_tokens": 0
+  }
+ },
+ "read:number": {
+  "answers": {
+   "qty": {
+    "type": "number",
+    "number": 2,
+    "span": [
+     172,
+     173
+    ],
+    "found": 0.9388051204557938,
+    "text": "2",
+    "unit": null
+   },
+   "price": {
+    "type": "number",
+    "number": 25,
+    "span": [
+     273,
+     275
+    ],
+    "found": 0.9877815586183162,
+    "text": "25",
+    "unit": "USD"
+   }
+  },
+  "usage": {
+   "input_tokens": 223,
+   "output_tokens": 0
+  }
+ },
+ "read:date": {
+  "answers": {
+   "shipped": {
+    "type": "date",
+    "date": "2026-03-14",
+    "span": [
+     335,
+     345
+    ],
+    "found": 0.9970208330834658,
+    "text": "2026-03-14",
+    "path": "/order/shipped_on"
+   }
+  },
+  "usage": {
+   "input_tokens": 178,
+   "output_tokens": 0
+  }
+ },
+ "read:text-plain": {
+  "answers": {
+   "q": {
+    "type": "text",
+    "text": "settings",
+    "span": [
+     90,
+     98
+    ],
+    "found": 0.9401833345158345
+   }
+  },
+  "usage": {
+   "input_tokens": 71,
+   "output_tokens": 0
+  }
+ },
+ "estimate": {
+  "answers": {
+   "q": {
+    "type": "number",
+    "number": 7.0,
+    "interval": [
+     4.0,
+     8.0
+    ],
+    "unit": null
+   }
+  },
+  "usage": {
+   "input_tokens": 80,
+   "output_tokens": 0
+  }
+ },
+ "choice:multiple": {
+  "answers": {
+   "q": {
+    "type": "choice",
+    "choices": [
+     "billing",
+     "crash"
+    ],
+    "probabilities": {
+     "billing": 0.9690721649484536,
+     "crash": 0.9690721649484536,
+     "login": 0.0001330021796631635,
+     "slow": 0.0
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 108,
+   "output_tokens": 0
+  }
+ },
+ "mixed:read+typed": {
+  "answers": {
+   "name": {
+    "type": "text",
+    "text": "Mika Tanaka",
+    "span": [
+     68,
+     79
+    ],
+    "found": 0.9920768516351112,
+    "path": "/order/customer/name"
+   },
+   "shipped": {
+    "type": "noul",
+    "noul": 0.9993646059975673
+   },
+   "tier": {
+    "type": "choice",
+    "choice": "billing",
+    "confidence": 0.6736912887780239,
+    "probabilities": {
+     "billing": 0.6736912887780239,
+     "engineering": 0.07915069043132063,
+     "sales": 0.13116082751450947,
+     "account": 0.11599719327614597
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 284,
+   "output_tokens": 0
+  }
+ }
+}

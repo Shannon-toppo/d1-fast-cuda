@@ -1,0 +1,27 @@
+{
+ "model": "d1-3B",
+ "engine": "fast-compile-wsl",
+ "gpu": "NVIDIA GeForce RTX 4070 Ti",
+ "load_s": 34.091044902801514,
+ "accuracy_pass_s": 86.14353966712952,
+ "memory_gb": 6.873186816,
+ "long_tokens": 4178,
+ "speed_ms": {
+  "1q": 13.939336500015997,
+  "3q": 19.98956850000866,
+  "long": 304.4493544999938,
+  "image": 41.733340500002214,
+  "batch64_per_s": 149.31294047054897
+ },
+ "accuracy": [
+  113,
+  118
+ ],
+ "wrong": [
+  "text22:sentiment.q",
+  "text28:score.q",
+  "text30:score.q",
+  "image02.count",
+  "image19.count"
+ ]
+}

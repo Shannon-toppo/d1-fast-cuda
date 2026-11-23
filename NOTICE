@@ -1,0 +1,16 @@
+d1-fast-cuda
+Fast CUDA inference for LiquidAI d1-3B and d1-2B.
+
+This package runs the d1 checkpoints' own code (https://huggingface.co/LiquidAI/d1-3B,
+https://huggingface.co/LiquidAI/d1-2B), loaded from the Hugging Face Hub with
+`trust_remote_code`, and replaces only its language model's forward pass and option
+readout. Parts of this package follow that code closely: the d1-3B request runner
+(`Fast3B.run`, `Fast3B._request`, after `runner.SystemOne.run` / `_request`), the
+packed tree (`Tree`, after `hybrid.Tree`), the attention masks (`sees_mask`, after
+`attention.Sees`) and the windowed attention (`HybridLM._windowed`, after
+`attention._windowed`). These are licensed under the LFM Open License v1.0:
+LICENSES/LFM-Open-License-v1.0.txt.
+
+The model weights and the checkpoints' code are not part of this package. They are
+downloaded from the Hugging Face Hub under the LFM Open License v1.0 when a model is
+loaded.
