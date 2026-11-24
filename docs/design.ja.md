@@ -4,7 +4,7 @@ d1-3Bとd1-2BをCUDAで速く動かすために決めたこと、測ったこと
 
 ## 前提
 
-d1は文章を生成しません。状態と質問を1回のforward passに通し、回答位置のlogitsから選択肢の確率を読みます。推論はprefillだけで、1問のプロンプトは約100トークンです（d1-fast-mlxの設計メモと同じ前提です）。
+d1は文章を生成しません。状態と質問を1回のforward passに通し、回答位置のlogitsから選択肢の確率を読みます。推論はprefillだけで、1問のプロンプトは約100トークンです（[d1-fast-mlx](https://github.com/Shannon-toppo/d1-fast-mlx)の設計メモと同じ前提です）。
 
 比較の相手は、各モデルカードの方法で動かした元のPyTorch実装です。d1-2Bは`model.compile()`、d1-3Bは`model.compile(mode="reduce-overhead")`を呼び、ウォーム呼び出しの中央値を取ります（`bench/benchmark.py`）。
 

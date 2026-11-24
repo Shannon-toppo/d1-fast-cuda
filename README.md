@@ -2,7 +2,7 @@
 
 Fast CUDA inference for [LiquidAI d1-3B](https://huggingface.co/LiquidAI/d1-3B) and
 [d1-2B](https://huggingface.co/LiquidAI/d1-2B), on Windows and Linux.
-The CUDA sibling of d1-fast-mlx. [日本語版 README](README.ja.md)
+The CUDA sibling of [d1-fast-mlx](https://github.com/Shannon-toppo/d1-fast-mlx). [日本語版 README](README.ja.md)
 
 d1 models answer typed questions (`noul`, `choice`, `score`, and on d1-2B span reads
 of `text`, `number`, `date`) about a state in one forward pass: nothing is decoded.

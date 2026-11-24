@@ -1,6 +1,6 @@
 # d1-fast-cuda
 
-[LiquidAI d1-3B](https://huggingface.co/LiquidAI/d1-3B)と[d1-2B](https://huggingface.co/LiquidAI/d1-2B)をCUDAで速く動かすパッケージです。WindowsでもLinuxでも動きます。d1-fast-mlxのCUDA版です。[English README](README.md)
+[LiquidAI d1-3B](https://huggingface.co/LiquidAI/d1-3B)と[d1-2B](https://huggingface.co/LiquidAI/d1-2B)をCUDAで速く動かすパッケージです。WindowsでもLinuxでも動きます。[d1-fast-mlx](https://github.com/Shannon-toppo/d1-fast-mlx)のCUDA版です。[English README](README.md)
 
 d1は、状態についての型付きの質問（`noul`、`choice`、`score`、d1-2Bでは`text`、`number`、`date`のspan読み取り）に1回のforward passで答えます。文章は生成しません。このパッケージは、チェックポイント自身の`trust_remote_code`のモデルをそのまま読み込み、言語モデルのforwardと選択肢のreadoutだけを差し替えます。API、プロンプト、画像の前処理、答えの形式は元のままです。
 
